@@ -7,6 +7,7 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     lateinit var btnBmi: Button
+    lateinit var btnsendMoney:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,6 +15,11 @@ class MainActivity : AppCompatActivity() {
         btnBmi = findViewById(R.id.btnBmi)
         btnBmi.setOnClickListener {
             val intent = Intent(this, BMICalculatorActivity::class.java)
+            startActivity(intent)
+        }
+         btnsendMoney= findViewById(R.id.btnsendMoney)
+        btnsendMoney.setOnClickListener {
+            val intent= Intent(this,sendMoneyActivity1::class.java)
             startActivity(intent)
         }
     }
